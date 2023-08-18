@@ -26,8 +26,17 @@ foreach($qry->fetch_array() as $k => $val){
 		</div>
 		<div class="form-group">
 	        <label for="" class="control-label">Blood Group</label>
-			<input type="text" class="form-control" name="blood_group"  value="<?php echo isset($blood_group) ? $blood_group :'' ?>" required readonly>
-			
+			<select name="blood_group" id="" class="custom-select select2" required>
+				<option value=""></option>
+				<option <?php echo isset($blood_group) && $blood_group == 'A+' ? ' selected' : '' ?>>A+</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'B+' ? ' selected' : '' ?>>B+</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'O+' ? ' selected' : '' ?>>O+</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'AB+' ? ' selected' : '' ?>>AB+</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'A-' ? ' selected' : '' ?>>A-</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'B-' ? ' selected' : '' ?>>B-</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'O-' ? ' selected' : '' ?>>O-</option>
+				<option <?php echo isset($blood_group) && $blood_group == 'AB-' ? ' selected' : '' ?>>AB-</option>
+			</select>
 		</div>
 		<div class="form-group">
 			<label for="" class="control-label">Volume (ml)</label>
