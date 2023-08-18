@@ -1616,13 +1616,15 @@ section {
     position: absolute;
     bottom: 0;
 }
+
+
 nav#sidebar {
     height: calc(100%);
     position: fixed;
     z-index: 99;
     left: 0;
     width: 250px;
-    background: url(../uploads/art-cover.jpg);
+    /* background: url(../uploads/art-cover.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
 }

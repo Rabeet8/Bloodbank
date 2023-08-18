@@ -66,7 +66,7 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <?php echo $v ?> <i class="fa fa-tint text-danger"></i></span>
+                                        <span class="float-right summary_icon"> <?php echo $v ?> </span>
                                         <h4><b>
                                             <?php echo ($bg_inn[$v] - $bg_out[$v]) / 1000 ?>
                                         </b></h4>
@@ -82,7 +82,7 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-user-friends text-primary "></i></span>
+                                        
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM donors")->num_rows ?>
                                         </b></h4>
@@ -95,7 +95,7 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-notes-medical text-danger "></i></span>
+                                        
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM blood_inventory where status = 1 and date(date_created) = '".date('Y-m-d')."' ")->num_rows ?>
                                         </b></h4>
@@ -108,7 +108,7 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-th-list "></i></span>
+                                        
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM requests where date(date_created) = '".date('Y-m-d')."' ")->num_rows ?>
                                         </b></h4>
@@ -121,7 +121,7 @@
                             <div class="card">
                                 <div class="card-body bg-light">
                                     <div class="card-body text-dark">
-                                        <span class="float-right summary_icon"> <i class="fa fa-check text-primary "></i></span>
+                                        
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM requests where date(date_created) = '".date('Y-m-d')."' and status = 1 ")->num_rows ?>
                                         </b></h4>
